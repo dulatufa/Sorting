@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.0)
-project(aardvark VERSION 0.3.0)
+project(sort VERSION 0.1.0)
 
 set(PROJECT_SOURCE_DIR "src")
 set(DOXYGEN_OUPUT_DIR "doxygen")
