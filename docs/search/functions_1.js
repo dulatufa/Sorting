@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main_5',['main',['../main_8cpp.html#a2c3f6775325c30275d11c6abee2db6a0',1,'main.cpp']]]
+  ['quicksort_5',['quickSort',['../main_8cpp.html#aa049e151a8b970832d10451c499d7bb1',1,'main.cpp']]]
 ];

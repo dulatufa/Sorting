@@ -1,15 +1,11 @@
 /**
  * @file main.cpp
- * @brief This is a test of CMake, doxygen, and GitHub.
+ * @brief This is sorting.
  * @details This is the long brief at the top of main.cpp.
- * @author Seth McNeill
- * @date 1/28/2021
+ * @author Bona Tufa
+ * @date 4/19/2021
  * 
  */
-
-#include <iostream>
-
-
 /**
  * Add two integers (brief)
  * 
@@ -18,11 +14,41 @@
  * @param b integer
  * @returns integer sum of a and b
  */
-int add(int a, int b) {
-    return(a + b);
+
+#include <iostream>
+#include <vector>
+using namespace std;
+void quickSort(vector<int> &a, int i, int n) {   
+    if (n <= 1) return;
+    int x = a[i + rand()%n];
+    int p = i-1, j = i, q = i+n;
+while (j < q) {
+    int comp = a[j] - x;
+    if (comp < 0) { // move to beginning of array
+    swap(a[j++], a[++p]); 
+} else if (comp > 0) {
+swap(a[j], a[--q]); // move to end of array
+} else {
+j++; // keep in the middle
+}
 }
 
 
-int main(int, char**) {
-    std::cout << "Hello, world! Ver 2.1\n";
+quickSort(a, i, p-i+1);
+
+quickSort(a, q, n-(q-i));
+}
+
+
+int main(){
+    vector<int> fag{5, 6, 2, 1, 27, 3};
+    for (int i = 0; i < fag.size(); i++) {
+        std::cout << fag.at(i) << ' ';
+    }
+    quickSort(fag, 0, fag.size());
+    cout << endl;
+    for (int i = 0; i < fag.size(); i++) {
+        std::cout << fag.at(i) << ' ';
+    }
+  cout << "done!";  
 }
